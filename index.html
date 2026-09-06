@@ -1,0 +1,332 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grand Horizon Hotel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🏨 GRAND HORIZON</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#restaurant">Restaurant</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#booking" class="nav-button">Book Now</a>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+            <p class="subtitle">WELCOME TO GRAND HORIZON</p>
+
+            <h1>
+                Stay Somewhere<br>
+                <span>Extraordinary.</span>
+            </h1>
+
+            <p>
+                Experience comfort, elegance and unforgettable
+                hospitality in the heart of the city.
+            </p>
+
+            <a href="#booking" class="button">Reserve Your Stay</a>
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="about section">
+
+        <div>
+            <p class="subtitle">ABOUT US</p>
+
+            <h2>A Better Way To Stay</h2>
+
+            <p>
+                Grand Horizon Hotel combines modern luxury with
+                warm hospitality. Whether you're travelling for
+                business, relaxation or adventure, we're here to
+                make your stay memorable.
+            </p>
+
+            <p>
+                Our carefully designed rooms, delicious food and
+                excellent facilities give you everything you need
+                for a comfortable stay.
+            </p>
+        </div>
+
+        <div class="about-box">
+            <div>
+                <strong>120+</strong>
+                <span>Rooms</span>
+            </div>
+
+            <div>
+                <strong>4.9</strong>
+                <span>Guest Rating</span>
+            </div>
+
+            <div>
+                <strong>24/7</strong>
+                <span>Service</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Rooms -->
+    <section id="rooms" class="section rooms">
+
+        <p class="subtitle">OUR ROOMS</p>
+
+        <h2>Find Your Perfect Room</h2>
+
+        <div class="room-grid">
+
+            <div class="room-card">
+                <div class="room-image room1"></div>
+
+                <div class="room-info">
+                    <h3>Deluxe Room</h3>
+
+                    <p>
+                        A comfortable room with a relaxing
+                        atmosphere and modern facilities.
+                    </p>
+
+                    <div class="price">
+                        $120 <span>/ night</span>
+                    </div>
+
+                    <a href="#booking" class="small-button">
+                        Book Room
+                    </a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image room2"></div>
+
+                <div class="room-info">
+                    <h3>Executive Suite</h3>
+
+                    <p>
+                        Spacious accommodation designed for
+                        guests who want extra comfort.
+                    </p>
+
+                    <div class="price">
+                        $220 <span>/ night</span>
+                    </div>
+
+                    <a href="#booking" class="small-button">
+                        Book Room
+                    </a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image room3"></div>
+
+                <div class="room-info">
+                    <h3>Presidential Suite</h3>
+
+                    <p>
+                        Our most luxurious accommodation with
+                        premium facilities and extra space.
+                    </p>
+
+                    <div class="price">
+                        $450 <span>/ night</span>
+                    </div>
+
+                    <a href="#booking" class="small-button">
+                        Book Room
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Amenities -->
+    <section id="amenities" class="section amenities">
+
+        <p class="subtitle">HOTEL AMENITIES</p>
+
+        <h2>Everything You Need</h2>
+
+        <div class="amenity-grid">
+
+            <div class="amenity">
+                <div>🏊</div>
+                <h3>Swimming Pool</h3>
+                <p>Relax beside our beautiful pool.</p>
+            </div>
+
+            <div class="amenity">
+                <div>💪</div>
+                <h3>Fitness Center</h3>
+                <p>Stay active during your stay.</p>
+            </div>
+
+            <div class="amenity">
+                <div>📶</div>
+                <h3>Free Wi-Fi</h3>
+                <p>Fast internet throughout the hotel.</p>
+            </div>
+
+            <div class="amenity">
+                <div>🚗</div>
+                <h3>Free Parking</h3>
+                <p>Safe and convenient parking.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Restaurant -->
+    <section id="restaurant" class="restaurant">
+
+        <div class="restaurant-content">
+
+            <p class="subtitle">GRAND HORIZON RESTAURANT</p>
+
+            <h2>Good Food.<br>Great Memories.</h2>
+
+            <p>
+                Enjoy delicious meals prepared by our chefs
+                using fresh ingredients and inspired flavours.
+            </p>
+
+            <button onclick="showMenu()">
+                View Today's Special
+            </button>
+
+            <p id="special"></p>
+
+        </div>
+
+    </section>
+
+    <!-- Booking -->
+    <section id="booking" class="section booking">
+
+        <p class="subtitle">RESERVATION</p>
+
+        <h2>Book Your Stay</h2>
+
+        <form id="bookingForm">
+
+            <div class="form-row">
+
+                <div>
+                    <label>Check-in</label>
+                    <input type="date" id="checkin" required>
+                </div>
+
+                <div>
+                    <label>Check-out</label>
+                    <input type="date" id="checkout" required>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div>
+                    <label>Guests</label>
+
+                    <select required>
+                        <option value="">Select guests</option>
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                        <option>5+ Guests</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Room</label>
+
+                    <select required>
+                        <option value="">Select room</option>
+                        <option>Deluxe Room</option>
+                        <option>Executive Suite</option>
+                        <option>Presidential Suite</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <label>Full Name</label>
+            <input type="text" placeholder="Your name" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="Your email" required>
+
+            <button type="submit" class="book-button">
+                Request Reservation
+            </button>
+
+            <p id="bookingMessage"></p>
+
+        </form>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2>Ready For Your Stay?</h2>
+
+        <p>
+            We look forward to welcoming you to Grand Horizon Hotel.
+        </p>
+
+        <div class="contact-info">
+            <span>📍 25 Horizon Avenue</span>
+            <span>📞 +234 09052869135</span>
+            <span>✉️ reservations@grandhorizon.example</span>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">🏨 GRAND HORIZON</div>
+
+        <p>
+            Luxury • Comfort • Hospitality
+        </p>
+
+        <p class="copyright">
+            © 2026 Grand Horizon Hotel
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
