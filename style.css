@@ -1,0 +1,475 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #252525;
+    background: #faf8f4;
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #a47b3c;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    background: #a47b3c;
+    color: white !important;
+    border-radius: 4px;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 10%;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.48),
+            rgba(0,0,0,0.48)
+        ),
+        url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.subtitle {
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #a47b3c;
+    margin-bottom: 15px;
+}
+
+.hero .subtitle {
+    color: #e7c88f;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 80px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #e7c88f;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.button,
+.small-button {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #a47b3c;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+.button:hover,
+.small-button:hover {
+    background: #7d5c2d;
+    transform: translateY(-2px);
+}
+
+/* General Sections */
+
+.section {
+    padding: 100px 9%;
+}
+
+.section h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+/* About */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+.about p {
+    margin-bottom: 20px;
+}
+
+.about-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.about-box div {
+    background: white;
+    padding: 35px 15px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+.about-box strong {
+    display: block;
+    font-size: 30px;
+    color: #a47b3c;
+}
+
+.about-box span {
+    font-size: 13px;
+}
+
+/* Rooms */
+
+.rooms {
+    text-align: center;
+    background: #f1ede5;
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.room-card {
+    background: white;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.room-image {
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+}
+
+.room1 {
+    background-image: url("https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80");
+}
+
+.room2 {
+    background-image: url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80");
+}
+
+.room3 {
+    background-image: url("https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80");
+}
+
+.room-info {
+    padding: 25px;
+}
+
+.room-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #a47b3c;
+    margin: 20px 0;
+}
+
+.price span {
+    font-size: 13px;
+    color: #777;
+}
+
+/* Amenities */
+
+.amenities {
+    text-align: center;
+}
+
+.amenity-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.amenity {
+    background: white;
+    padding: 35px 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.amenity div {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.amenity h3 {
+    margin-bottom: 8px;
+}
+
+/* Restaurant */
+
+.restaurant {
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 10%;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.restaurant-content {
+    max-width: 600px;
+}
+
+.restaurant h2 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.restaurant button {
+    margin-top: 20px;
+    padding: 13px 22px;
+    border: none;
+    background: #a47b3c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#special {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Booking */
+
+.booking {
+    max-width: 850px;
+    margin: auto;
+}
+
+.booking h2 {
+    margin-bottom: 30px;
+}
+
+form {
+    background: white;
+    padding: 35px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.book-button {
+    margin-top: 25px;
+
+    width: 100%;
+    padding: 15px;
+
+    border: none;
+
+    background: #a47b3c;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#bookingMessage {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Contact */
+
+.contact {
+    text-align: center;
+    padding: 80px 20px;
+    background: #26231f;
+    color: white;
+}
+
+.contact h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #171614;
+    color: white;
+}
+
+footer p {
+    margin: 7px;
+}
+
+.copyright {
+    opacity: 0.5;
+    font-size: 13px;
+}
+
+/* Mobile */
+
+@media (max-width: 850px) {
+
+    nav ul,
+    .nav-button {
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .room-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .amenity-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .restaurant h2 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .amenity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-box {
+        grid-template-columns: 1fr;
+    }
+}
+```
